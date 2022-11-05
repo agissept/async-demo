@@ -42,13 +42,13 @@ class MainActivity : AppCompatActivity() {
             .build()
     }
 
-    private fun createCallback(number: Int): Callback<RequestResponse> {
+    private fun createCallback(callbackId: Int): Callback<RequestResponse> {
         return object : Callback<RequestResponse> {
             override fun onResponse(
                 call: Call<RequestResponse>,
                 response: Response<RequestResponse>,
             ) {
-                println("call back id :$number")
+                println("callback id: $callbackId")
             }
 
             override fun onFailure(call: Call<RequestResponse>, t: Throwable) {
